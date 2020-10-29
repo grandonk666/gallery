@@ -7,11 +7,11 @@ menuToggle.addEventListener("click", function () {
 
 const serviceIcon = document.querySelectorAll(".icon");
 serviceIcon.forEach(function(el){
-  el.addEventListener('mouseenter',function(e){
-    e.target.nextElementSibling.nextElementSibling.style.display = 'block';
+  el.parentNode.addEventListener('mouseenter',function(e){
+    e.target.lastElementChild.style.display = 'block';
   });
-  el.addEventListener('mouseleave',function(e){
-    e.target.nextElementSibling.nextElementSibling.style.display = 'none';
+  el.parentNode.addEventListener('mouseleave',function(e){
+    e.target.lastElementChild.style.display = 'none';
   });
 });
 
